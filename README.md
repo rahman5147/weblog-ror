@@ -1,5 +1,5 @@
 # Introduction
-Simple web blog post
+Basic blog website using Ruby on Rails framework.
 
 # Requirement
 - NodeJS => v6.10.0
