@@ -1,5 +1,12 @@
 <h3>Add new post</h3>
 <%= form_for :post, url: {:action=>'create'} do |f| %>
+	<% if @post.errors.any? %>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<div class="alert alert-danger"><%= msg %></div>
+			<% end %>
+		</ul>
+	<% end %>
 	<div class="form-group row">
 		<!-- <label for="title" class="col-sm-2 col-form-label">Title</label> -->
 		<%= f.label :title %>
